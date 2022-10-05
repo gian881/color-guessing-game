@@ -1,6 +1,10 @@
-# Adivinhe a cor
+<h1 align="center"> Adivinhe a cor </h1>
 
-Um jogo simples de adivinhar a cor.
+<p align="center">
+    <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="Typescript">  
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="ReactJS"> 
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+</p>
 
 ## Como jogar
 
@@ -32,5 +36,5 @@ npm run dev
 
 ## Jogo feito utilizando ReactJS
 <p align="center">
-    <img src="../media/reactjs-icon.svg?raw=true" alt="Sublime's custom image"/>
+    <img src="../media/reactjs-icon.svg?raw=true" alt="ReactJS Logo"/>
 </p>
