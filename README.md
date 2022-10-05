@@ -31,4 +31,6 @@ npm run dev
 ```
 
 ## Jogo feito utilizando ReactJS
-![ReactJS Logo](../media/reactjs-icon.svg?raw=true) 
+<p align="center">
+    <img src="../media/reactjs-icon.svg?raw=true" alt="Sublime's custom image"/>
+</p>
