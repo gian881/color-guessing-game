@@ -3,10 +3,8 @@ import '../styles/Jogo.css'
 import { GerarCor } from '../utils/GerarCor';
 import HighScoreModal from './HighScoreModal';
 
-interface GuessTheCodeProps {
-}
 
-function GuessTheCode(props: GuessTheCodeProps) {
+function GuessTheCode() {
     const [pontos, setPontos] = useState(0)
     const [cor, setCor] = useState<string>("#FF0000")
     const [cores, setCores] = useState<string[]>(["#FF0000", "#00FF00", "#0000FF"])

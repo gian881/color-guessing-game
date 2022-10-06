@@ -20,7 +20,7 @@ function HighScoreModal(props: HighScoreModalProps) {
 
                 <div className="body">
                     <p>A resposta certa era</p>
-                    {props.jogo === "GuessTheCode" ? <p>{props.respostaCerta}</p> : <div style={{ backgroundColor: props.respostaCerta, width: "50px", height: "50px" }}></div>}
+                    {props.jogo === "GuessTheCode" ? <p>{props.respostaCerta}</p> : <div style={{ backgroundColor: props.respostaCerta, width: "75px", height: "75px", borderRadius: "50%" }}></div>}
                     <p>Você fez {props.pontos} pontos</p>
                     <p>Sua maior pontuação foi {props.highscore} pontos</p>
                 </div>

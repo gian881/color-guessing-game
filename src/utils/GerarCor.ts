@@ -1,4 +1,4 @@
-function gerarHex() {
+function gerarHex(): string {
     let numero = Math.floor(Math.random() * 255).toString(16);
     while (numero.length < 2) {
         numero = '0' + numero;
@@ -6,7 +6,7 @@ function gerarHex() {
     return numero;
 }
 
-function GerarCor() {
+function GerarCor(): string {
     const red = gerarHex();
     const green = gerarHex();
     const blue = gerarHex();
