@@ -1,0 +1,78 @@
+button {
+    cursor: pointer;
+}
+
+.modal-bg {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.8);
+
+    position: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container {
+    width: 500px;
+    height: 500px;
+    border-radius: 12px;
+    color: white;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin: auto;
+}
+
+.close-btn {
+    background-color: transparent;
+    padding: 0.55rem 1.1rem;
+    border: none;
+    font-size: 20px;
+}
+
+.close-btn:hover {
+    background-color: transparent;
+}
+
+.body {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 50%;
+    align-items: center;
+    font-size: 1.7rem;
+}
+
+.modal-container .footer {
+    flex: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container .footer button {
+    background-color: rgb(00, 128, 00);
+    border-radius: 8px;
+    font-size: 20px;
+    transition: background-color 0.2s ease;
+}
+
+.modal-container .footer button:hover {
+    background-color: rgb(0, 100, 0);
+}
