@@ -5,17 +5,17 @@ import { ChangeFavicon } from './utils/ChangeFavicon'
 
 
 function App() {
-  const [jogo, setJogo] = useState<"GuessTheCode" | "GuessTheColor">("GuessTheCode")
+  const [jogo, setJogo] = useState<"Adivinhe o Código" | "Adivinhe a Cor">("Adivinhe o Código")
 
   function outroJogo() {
-    return jogo === "GuessTheCode" ? "GuessTheColor" : "GuessTheCode"
+    return jogo === "Adivinhe o Código" ? "Adivinhe a Cor" : "Adivinhe o Código"
   }
   function handleNewGame(cor: string) {
     ChangeFavicon(cor)
   }
 
   useEffect(() => {
-    localStorage.getItem("jogo") && setJogo(localStorage.getItem("jogo") as "GuessTheCode" | "GuessTheColor")
+    localStorage.getItem("jogo") && setJogo(localStorage.getItem("jogo") as "Adivinhe o Código" | "Adivinhe a Cor")
   }, [])
 
   function mudarJogo() {
@@ -27,7 +27,7 @@ function App() {
     <>
       <button
         style={{ marginTop: "15px" }} onClick={() => mudarJogo()}>Jogar {outroJogo()}</button>
-      {jogo === "GuessTheCode" ? <GuessTheCode handleNewGame={handleNewGame} /> : <GuessTheColor />}
+      {jogo === "Adivinhe o Código" ? <GuessTheCode handleNewGame={handleNewGame} /> : <GuessTheColor />}
     </>
   )
 }
