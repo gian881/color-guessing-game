@@ -1,4 +1,4 @@
-import styles from './HighScoreModal.css'
+import '../styles/HighScoreModal.css'
 
 interface HighScoreModalProps {
     pontos: number;
