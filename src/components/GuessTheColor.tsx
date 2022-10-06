@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/GuessTheColor.css'
 import { GerarCor } from '../utils/GerarCor';
+import { trocarTitulo } from '../utils/TrocarTitulo';
 import HighScoreModal from './HighScoreModal';
 
 function GuessTheColor() {
@@ -54,6 +55,7 @@ function GuessTheColor() {
         gerarNovoJogo()
         localStorage.getItem("guessTheColorHighScore") && setHighScore(Number(localStorage.getItem("guessTheColorHighScore")))
         localStorage.getItem("guessTheColorPontos") && setPontos(Number(localStorage.getItem("guessTheColorPontos")))
+        trocarTitulo("Adivinhe a Cor")
     }, [])
 
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/Jogo.css'
 import { GerarCor } from '../utils/GerarCor';
+import { trocarTitulo } from '../utils/TrocarTitulo';
 import HighScoreModal from './HighScoreModal';
 
 interface GuessTheCodeProps {
@@ -18,6 +19,7 @@ function GuessTheCode(props: GuessTheCodeProps) {
         gerarNovoJogo()
         localStorage.getItem("guessTheCodeHighScore") && setHighScore(Number(localStorage.getItem("guessTheCodeHighScore")))
         localStorage.getItem("guessTheCodePontos") && setPontos(Number(localStorage.getItem("guessTheCodePontos")))
+        trocarTitulo("Adivinhe o Código")
     }, [])
 
     function handleHexCodeClick(event: React.MouseEvent<HTMLButtonElement>) {
