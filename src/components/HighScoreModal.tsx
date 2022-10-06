@@ -10,8 +10,8 @@ interface HighScoreModalProps {
 
 function HighScoreModal(props: HighScoreModalProps) {
     return (
-        <div className="modal-bg">
-            <div className='modal-container'>
+        <div className="modal-bg" onClick={() => props.handleModalClose()}>
+            <div className='modal-container' onClick={e => e.stopPropagation()}>
 
                 <div className="title-container">
                     <h1 className='title'>Você perdeu</h1>
