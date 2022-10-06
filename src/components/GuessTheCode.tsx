@@ -3,12 +3,14 @@ import '../styles/Jogo.css'
 import { GerarCor } from '../utils/GerarCor';
 import HighScoreModal from './HighScoreModal';
 
+interface GuessTheCodeProps {
+    handleNewGame: (cor: string) => void
+}
 
-function GuessTheCode() {
+function GuessTheCode(props: GuessTheCodeProps) {
     const [pontos, setPontos] = useState(0)
     const [cor, setCor] = useState<string>("#FF0000")
     const [cores, setCores] = useState<string[]>(["#FF0000", "#00FF00", "#0000FF"])
-    const [cheat, setCheat] = useState<boolean>(false)
     const [modalOpened, setModalOpened] = useState<boolean>(false)
     const [highScore, setHighScore] = useState<number>(0)
 
@@ -50,6 +52,7 @@ function GuessTheCode() {
         let corCerta = GerarCor()
         setCor(corCerta)
         setCores(shuffleArray([corCerta, GerarCor(), GerarCor()]))
+        props.handleNewGame(corCerta)
     }
 
     return (<>
@@ -58,9 +61,6 @@ function GuessTheCode() {
             <div className="cor" style={{ backgroundColor: cor }}></div>
             <div className="buttons">
                 {cores.map((cor) => {
-                    if (cheat) {
-                        return <button onClick={handleHexCodeClick} key={cor} style={{ backgroundColor: cor }}>{cor}</button>
-                    }
                     return <button onClick={handleHexCodeClick} key={cor}>{cor}</button>
                 })}
             </div>

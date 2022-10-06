@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import GuessTheCode from './components/GuessTheCode'
 import GuessTheColor from './components/GuessTheColor'
+import { ChangeFavicon } from './utils/ChangeFavicon'
 
 
 function App() {
@@ -8,6 +9,9 @@ function App() {
 
   function outroJogo() {
     return jogo === "GuessTheCode" ? "GuessTheColor" : "GuessTheCode"
+  }
+  function handleNewGame(cor: string) {
+    ChangeFavicon(cor)
   }
 
   useEffect(() => {
@@ -23,7 +27,7 @@ function App() {
     <>
       <button
         style={{ marginTop: "15px" }} onClick={() => mudarJogo()}>Jogar {outroJogo()}</button>
-      {jogo === "GuessTheCode" ? <GuessTheCode /> : <GuessTheColor />}
+      {jogo === "GuessTheCode" ? <GuessTheCode handleNewGame={handleNewGame} /> : <GuessTheColor />}
     </>
   )
 }
