@@ -23,6 +23,7 @@ function GuessTheColor() {
 
         if (cor === rgb2hex(event.currentTarget.style.backgroundColor).toUpperCase()) {
             gerarNovoJogo()
+            localStorage.setItem("guessTheColorPontos", String(pontos + 1))
             setPontos(pontos + 1)
         } else {
             if (pontos > highScore) {
@@ -52,6 +53,7 @@ function GuessTheColor() {
     useEffect(() => {
         gerarNovoJogo()
         localStorage.getItem("guessTheColorHighScore") && setHighScore(Number(localStorage.getItem("guessTheColorHighScore")))
+        localStorage.getItem("guessTheColorPontos") && setPontos(Number(localStorage.getItem("guessTheColorPontos")))
     }, [])
 
 

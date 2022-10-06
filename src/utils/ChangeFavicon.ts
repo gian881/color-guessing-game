@@ -1,7 +1,6 @@
 import html2canvas from "html2canvas"
 
 async function ChangeFavicon(cor: string) {
-
     const div = document.createElement('div')
     div.style.backgroundColor = cor
     div.style.width = '16px'
@@ -16,10 +15,12 @@ async function ChangeFavicon(cor: string) {
     const newFavicon = await html2canvas(document.querySelector('.favicon') as HTMLDivElement, { backgroundColor: null })
 
     const link = document.querySelector("link[rel*='icon']")
+
     if (link) {
         link.setAttribute('type', 'image/png')
         link.setAttribute('href', newFavicon.toDataURL('image/png'))
     }
+
     document.body.removeChild(div)
 }
 

@@ -17,11 +17,13 @@ function GuessTheCode(props: GuessTheCodeProps) {
     useEffect(() => {
         gerarNovoJogo()
         localStorage.getItem("guessTheCodeHighScore") && setHighScore(Number(localStorage.getItem("guessTheCodeHighScore")))
+        localStorage.getItem("guessTheCodePontos") && setPontos(Number(localStorage.getItem("guessTheCodePontos")))
     }, [])
 
     function handleHexCodeClick(event: React.MouseEvent<HTMLButtonElement>) {
         if (cor === event.currentTarget.textContent) {
             gerarNovoJogo()
+            localStorage.setItem("guessTheCodePontos", String(pontos + 1))
             setPontos(pontos + 1)
         } else {
             if (pontos > highScore) {
