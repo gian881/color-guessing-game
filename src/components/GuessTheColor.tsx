@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../styles/GuessTheColor.css'
+import styles from '../styles/GuessTheColor.module.css'
 import { GerarCor } from '../utils/GerarCor';
 import { trocarTitulo } from '../utils/TrocarTitulo';
 import HighScoreModal from './HighScoreModal';
@@ -61,12 +61,12 @@ function GuessTheColor() {
 
     return (
         <>
-            <div className="wrapper">
+            <div className={styles.wrapper}>
                 <h1>{pontos}</h1>
                 <h1>{cor}</h1>
-                <div className="buttons">
+                <div className={styles.buttons}>
                     {cores.map((cor) => {
-                        return <button onClick={handleColorClick} style={{ backgroundColor: cor }} className='btn-color' key={cor}></button>
+                        return <button onClick={handleColorClick} style={{ backgroundColor: cor }} className={styles["btn-color"]} key={cor}></button>
                     })}
                 </div>
             </div>

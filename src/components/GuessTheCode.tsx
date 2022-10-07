@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../styles/Jogo.css'
+import styles from '../styles/GuessTheCode.module.css'
 import { GerarCor } from '../utils/GerarCor';
 import { trocarTitulo } from '../utils/TrocarTitulo';
 import HighScoreModal from './HighScoreModal';
@@ -60,10 +60,10 @@ function GuessTheCode(props: GuessTheCodeProps) {
     }
 
     return (<>
-        <div className="wrapper">
+        <div className={styles.wrapper}>
             <h1>{pontos}</h1>
-            <div className="cor" style={{ backgroundColor: cor }}></div>
-            <div className="buttons">
+            <div className={styles.cor} style={{ backgroundColor: cor }}></div>
+            <div className={styles.buttons}>
                 {cores.map((cor) => {
                     return <button onClick={handleHexCodeClick} key={cor}>{cor}</button>
                 })}

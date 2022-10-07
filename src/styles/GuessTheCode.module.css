@@ -35,14 +35,6 @@ h1 {
     margin-top: 0.5rem;
 }
 
-.acertou {
-    color: rgb(30, 202, 30);
-}
-
-.errou {
-    color: rgb(202, 30, 30);
-}
-
 @media (max-width: 380px) {
     .wrapper {
         width: 130px;

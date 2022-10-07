@@ -1,0 +1,49 @@
+.btn-color {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 100%;
+
+    margin: 10px;
+    cursor: pointer;
+}
+
+.wrapper {
+    min-width: 330px;
+    max-width: 370px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 30%;
+    height: 100%;
+    color: #fff;
+    transition: width 0.3s ease;
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+
+@media (max-width: 380px) {
+    .wrapper {
+        width: 130px;
+        min-width: 130px;
+    }
+
+    .buttons {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+}

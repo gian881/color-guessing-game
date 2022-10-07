@@ -1,4 +1,4 @@
-import '../styles/HighScoreModal.css'
+import styles from '../styles/HighScoreModal.module.css'
 
 interface HighScoreModalProps {
     pontos: number;
@@ -10,22 +10,22 @@ interface HighScoreModalProps {
 
 function HighScoreModal(props: HighScoreModalProps) {
     return (
-        <div className="modal-bg" onClick={() => props.handleModalClose()}>
-            <div className='modal-container' onClick={e => e.stopPropagation()}>
+        <div className={styles["modal-bg"]} onClick={() => props.handleModalClose()}>
+            <div className={styles["modal-container"]} onClick={e => e.stopPropagation()}>
 
-                <div className="title-container">
-                    <h1 className='title'>Você perdeu</h1>
-                    <button onClick={() => props.handleModalClose()} className='close-btn'> X </button>
+                <div className={styles["title-container"]}>
+                    <h1 className={styles.title}>Você perdeu</h1>
+                    <button onClick={() => props.handleModalClose()} className={styles["close-btn"]}> X </button>
                 </div>
 
-                <div className="body">
+                <div className={styles.body}>
                     <p>A resposta certa era</p>
                     {props.jogo === "GuessTheCode" ? <p>{props.respostaCerta}</p> : <div style={{ backgroundColor: props.respostaCerta, width: "75px", height: "75px", borderRadius: "50%" }}></div>}
                     <p>Você fez {props.pontos} pontos</p>
                     <p>Sua maior pontuação foi {props.highscore} pontos</p>
                 </div>
 
-                <div className="footer">
+                <div className={styles.footer}>
                     <button onClick={() => props.handleModalClose()}>Jogar novamente</button>
                 </div>
 

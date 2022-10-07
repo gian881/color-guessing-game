@@ -65,7 +65,7 @@ button {
     align-items: center;
 }
 
-.modal-container .footer button {
+.footer button {
     background-color: rgb(00, 128, 00);
     border-radius: 8px;
     font-size: 20px;
