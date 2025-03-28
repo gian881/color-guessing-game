@@ -65,8 +65,16 @@ function GuessTheColor() {
                 <h1>{pontos}</h1>
                 <h1>{cor}</h1>
                 <div className={styles.buttons}>
-                    {cores.map((cor) => {
-                        return <button onClick={handleColorClick} style={{ backgroundColor: cor }} className={styles["btn-color"]} key={cor}></button>
+                    {cores.map((cor, index) => {
+                        return (<button
+                            onClick={handleColorClick}
+                            style={{ backgroundColor: cor }}
+                            className={styles["btn-color"]}
+                            key={cor}
+                            aria-label={`Opção ${index + 1}`}
+                        >
+
+                        </button>)
                     })}
                 </div>
             </div>

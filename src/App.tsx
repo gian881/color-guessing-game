@@ -26,7 +26,11 @@ function App() {
   return (
     <>
       <button
-        style={{ marginTop: "15px" }} onClick={() => mudarJogo()}>Jogar {outroJogo()}</button>
+        style={{ marginTop: "15px" }}
+        onClick={() => mudarJogo()}
+      >
+        Jogar {outroJogo()}
+      </button>
       {jogo === "Adivinhe o Código" ? <GuessTheCode handleNewGame={handleNewGame} /> : <GuessTheColor />}
     </>
   )

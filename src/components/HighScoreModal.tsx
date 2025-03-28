@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import styles from '../styles/HighScoreModal.module.css'
 
 interface HighScoreModalProps {
@@ -9,13 +10,25 @@ interface HighScoreModalProps {
 }
 
 function HighScoreModal(props: HighScoreModalProps) {
+
+    useEffect(() => {
+        const close = (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+                props.handleModalClose()
+            }
+        }
+
+        window.addEventListener("keydown", close)
+        return () => window.removeEventListener("keydown", close)
+    })
+
     return (
         <div className={styles["modal-bg"]} onClick={() => props.handleModalClose()}>
             <div className={styles["modal-container"]} onClick={e => e.stopPropagation()}>
 
                 <div className={styles["title-container"]}>
                     <h1 className={styles.title}>Você perdeu</h1>
-                    <button onClick={() => props.handleModalClose()} className={styles["close-btn"]}> X </button>
+                    <button onClick={() => props.handleModalClose()} className={styles["close-btn"]} aria-label="Fechar"> X </button>
                 </div>
 
                 <div className={styles.body}>
